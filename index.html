@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music For Everyone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./external.css">
+</head>
+<body class="bg-black text-white">
+    <div class="flex lg:flex-row flex-col">
+        <header class="flex px-4 py-2 justify-center items-center lg:hidden">
+            <div>
+                <img class="w-40" src="./assets/Spotify_Logo_RGB_White.png" alt="">
+            </div>
+            
+        </header>
+    
+        <main class="lg:w-[100%] w-full bg-[#1c1c1d] text-white lg:max-h-[40rem] rounded-lg py-4 px-4 lg:my-2 ml-0 mr-2 lg:overflow-y-scroll lg:scrollbar lg:scrollbar-thumb-[#5a5a5a] lg:scrollbar-h-16 lg:overflow-x-hidden">
+            <section class="my-6">
+                <div class="flex items-center justify-between">
+                    <h1 class="hover:underline cursor-pointer font-poppins font-bold text-2xl">Recently Played</h1>
+                    <span class="font-poppins text-[#8d8c8d] cursor-pointer hover:underline font-semibold">Show all</span>
+                </div>
+                <div class="flex gap-4 mt-6 scrollbar-thumb-[#5a5a5a] no-scrollbar scrollbar-w-0 scrollbar-thin overflow-x-scroll SongDetails lg:justify-center">
+                    <div class="cursor-pointer bg-[#181818] relative p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px] hoverPlay">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67616d00001e02576521b1bf3ec2fd7fdfcbd5.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4 songDetails">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden songTitle songName">Dil Diyaan Gallan</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">By Vishal-Shekhar, Atif Aslam, Irshad Kamli</p>
+                        </div>
+                        <div class="playBtn">
+                            <i class="fa-solid fa-play play text-black" id="1"></i>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] relative p-4 text-center hover:bg-[#292829] transition-all rounded-xl w-[179px] hoverPlay">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67616d00001e02c7b32b2ebd1ed948c9e7e5c5.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4 songDetails">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden songName">Apna Bana Le</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">By PritamVara</p>
+                        </div>
+                        <div class="playBtn">
+                            <i class="fa-solid fa-play play text-black" id="2"></i>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 relative text-center hover:bg-[#292829] transition-all rounded-xl w-[179px] hoverPlay">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67616d00001e02d4a76235197643b7d252dd5d.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4 songDetails">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden songName">Dholna</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Subha Mudgal , Sukwinder Singh</p>
+                        </div>
+                        <div class="playBtn">
+                            <i class="fa-solid fa-play play text-black" id="3"></i>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 relative text-center hover:bg-[#292829] transition-all rounded-xl w-[179px] hoverPlay">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67616d00001e02707ea5b8023ac77d31756ed4.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4 songDetails">
+                            <p class="font-poppins font-bold text-ellipsis whitespace-nowrap overflow-hidden tracking-wider songName">Dheere Dheere</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">By Yo Yo Honey Singh</p>
+                        </div>
+                        <div class="playBtn">
+                            <i class="fa-solid fa-play play text-black" id="4"></i>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 relative text-center hover:bg-[#292829] transition-all rounded-xl w-[179px] hoverPlay">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67706c0000da84a3ff8736ea5b316a90408a50.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4 songDetails">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden songName">Nachde Se Saare</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">By anjali</p>
+                        </div>
+                        <div class="playBtn">
+                            <i class="fa-solid fa-play play text-black" id="5"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="my-6">
+                <div class="flex items-center justify-between">
+                    <h1 class="hover:underline cursor-pointer font-poppins font-bold text-2xl">Spotify original & Exclusive Shows</h1>
+                    <span class="font-poppins text-[#8d8c8d] cursor-pointer hover:underline font-semibold">Show all</span>
+                </div>
+                <div class="flex gap-4 mt-6 scrollbar-thumb-[#5a5a5a] no-scrollbar scrollbar-w-0 scrollbar-thin overflow-x-scroll lg:justify-center">
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center relative hover:bg-[#292829] transition-all rounded-xl w-[179px] hoverPlay">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67616d00001e02d49b0b7c02f3e61babef11b7.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4 songDetails">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden songName">Ainvayi Ainvayi</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2"> Salim-Sulaiman , Sunidhi Chauhan</p>
+                        </div>
+                        <div class="playBtn">
+                            <i class="fa-solid fa-play play text-black" id="6"></i>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center relative hover:bg-[#292829] transition-all rounded-xl w-[179px] hoverPlay">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab6761610000517411d0343dc3387fc183dab2e0.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4 songDetails">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden songName">Kaun Tujhe</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Palak Muchhal</p>
+                        </div>
+                        <div class="playBtn">
+                            <i class="fa-solid fa-play play text-black" id="7"></i>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center relative hover:bg-[#292829] transition-all rounded-xl w-[179px] hoverPlay">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67616d00001e02ac515af787eb2080c7a0b129.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4 songDetails">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden songName">Khalasi</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Anchint , Adithya Gadhvi</p>
+                        </div>
+                        <div class="playBtn">
+                            <i class="fa-solid fa-play play text-black" id="8"></i>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center relative hover:bg-[#292829] transition-all rounded-xl w-[179px] hoverPlay">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67616d00001e02bf35774f0ca5e1c3cfb4c222.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4 songDetails">
+                            <p class="font-poppins font-bold text-ellipsis whitespace-nowrap overflow-hidden tracking-wider songName">Mann Mohi Gayu</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Santvani Trivedi</p>
+                        </div>
+                        <div class="playBtn">
+                            <i class="fa-solid fa-play play text-black" id="9"></i>
+                        </div>
+                    </div>
+                    <div class="cursor-pointer bg-[#181818] p-4 text-center relative hover:bg-[#292829] transition-all rounded-xl w-[179px] hoverPlay">
+                        <div class="bg-gradient-to-r from-sky-500 to-indigo-500 h-36 w-36 inline-flex justify-center items-center">
+                            <img class="w-full h-full" src="./assets/ab67616d00001e023f3d35703bdcd917dad51c4f.jpeg" alt="">
+                        </div>
+                        <div class="text-left mt-4 songDetails">
+                            <p class="font-poppins font-bold tracking-wider text-ellipsis whitespace-nowrap overflow-hidden songName">Ek Pal Ka Jeena</p>
+                            <p class="font-roboto text-sm mt-2 text-[#888989] text-ellipsis line-clamp-2">Lucky Ali
+                            </p>
+                        </div>
+                        <div class="playBtn">
+                            <i class="fa-solid fa-play play text-black" id="10"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <div class="flex justify-between p-4 items-center fixed bottom-0 left-0 right-0 bg-black lg:flex-row flex-col lg:space-y-0 space-y-4">
+        <div class="flex space-x-4 items-center">
+            <div class="cursor-pointer mainSongBannerDiv">
+                <img class="mainSongBanner" class="h-16 w-16" src="./assets/ab67616d00004851576521b1bf3ec2fd7fdfcbd5.jpeg" alt="">
+            </div>
+            <div>
+                <p class="font-poppins font-bold hover:underline mainSongTitle">Dil Diyan Gallan</p>
+                <p class="font-roboto text-sm max-w-[16rem] text-ellipsis overflow-hidden whitespace-nowrap text-[#858585] mainSongSingers">Vishal-Shekhar, Atif Aslam, Irshad Kamli</p>
+            </div>
+            <div class="flex">
+                <img src="./assets/heart.svg" alt="">
+                <img class="" src="./assets/minimise.svg" alt="">
+            </div>
+        </div>
+        <div>
+            <div class="flex space-x-4 items-center justify-center">
+                <div class="cursor-pointer">
+                    <i class="fa-solid fa-backward-step text-2xl text-[#8d8d8c]" id="previousVideo"></i>
+                </div>
+                <div class="h-8 w-8 rounded-full bg-white inline-flex cursor-pointer justify-center items-center">
+                    <i class="fa-solid fa-play text-black w-full text-xl inline-flex justify-center" id="playSongButton"></i>
+                </div>
+                <div class="cursor-pointer">
+                    <i class="fa-solid fa-forward-step text-2xl text-[#8d8d8c]" id="nextVideo"></i>
+                </div>
+            </div>
+            <div class="flex space-x-2 items-center justify-center mt-2">
+                <span class="text-sm font-poppins text-[#8d8d8c]" id="songTime">0:00</span>
+                <input type="range" value="0" name="ProgressBar" class="slider w-64 sm:w-80 h-4" id="ProgressBar">
+                <span class="text-sm font-poppins text-[#8d8d8c]" id="songDurationTime">3:22</span>
+            </div>
+        </div>
+        <div class="flex space-x-3 items-center">
+            <div class="flex items-center space-x-2">
+                <i id="volumeBtn" class="fa-solid fa-volume-high text-[#8d8d8c]"></i>
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
