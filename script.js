@@ -19,16 +19,16 @@ let songAudio = new Audio("./assets/Audio/Dil Diyan Gallan.mp3");
 let songIndex = 0;
 
 let songs = [
-    {songName:"Dil Diyaan Gallan" , audio: "./assets/Audio/Dil Diyan Gallan.mp3", banner: "./assets/ab67616d00001e02576521b1bf3ec2fd7fdfcbd5.jpeg"},
-    {songName:"Apna Bana Le" , audio: "./assets/Audio/Apna-Bana-Le.mp3", banner: "./assets/ab67616d00001e02c7b32b2ebd1ed948c9e7e5c5.jpeg"},
-    {songName:'Dholna' , audio: "./assets/Audio/Dholna Pyar Ke Geet.mp3", banner: "./assets/ab67616d00001e02d4a76235197643b7d252dd5d.jpeg"},
-    {songName:"Dheere Dheere" , audio: "./assets/Audio/Dheere Dheere.mp3", banner: "./assets/ab67616d00001e02707ea5b8023ac77d31756ed4.jpeg"},
-    {songName:"Nachde Se Saare" , audio: "./assets/Audio/Nachde-Ne-Sare.mp3", banner: "./assets/ab67706c0000da84a3ff8736ea5b316a90408a50.jpeg"},
-    {songName:"Ainvayi Ainvayi" , audio: "./assets/Audio/Ainvayi Ainvayi.mp3", banner: "./assets/ab67616d00001e02d49b0b7c02f3e61babef11b7.jpeg"},
-    {songName:"Kaun Tujhe" , audio: "./assets/Audio/Kaun Tujhe.mp3", banner: "./assets/ab6761610000517411d0343dc3387fc183dab2e0.jpeg"},
-    {songName:"Khalasi" , audio: "./assets/Audio/Khalasi.mp3", banner: "./assets/ab67616d00001e02ac515af787eb2080c7a0b129.jpeg"},
-    {songName:"Mann Mohi Gayu" , audio: "./assets/Audio/Maru-Man-Mohi-Gayu.mp3", banner: "./assets/ab67616d00001e02bf35774f0ca5e1c3cfb4c222.jpeg"},
-    {songName:"Ek Pal Ka Jeena" , audio: "./assets/Audio/Ek Pal Ka Jeena.mp3", banner: "./assets/ab67616d00001e023f3d35703bdcd917dad51c4f.jpeg"},
+    {songName:"Dil Diyaan Gallan" , audio: "./assets/Audio/Dil Diyan Gallan.mp3", banner: "./assets/ab67616d00001e02576521b1bf3ec2fd7fdfcbd5.jpeg" , singers: "Vishal-Shekhar, Atif Aslam, Irshad Kamli"},
+    {songName:"Apna Bana Le" , audio: "./assets/Audio/Apna-Bana-Le.mp3", banner: "./assets/ab67616d00001e02c7b32b2ebd1ed948c9e7e5c5.jpeg" , singers: "PritamVara"},
+    {songName:'Dholna' , audio: "./assets/Audio/Dholna Pyar Ke Geet.mp3", banner: "./assets/ab67616d00001e02d4a76235197643b7d252dd5d.jpeg" , singers: "Subha Mudgal , Sukwinder Singh"},
+    {songName:"Dheere Dheere" , audio: "./assets/Audio/Dheere Dheere.mp3", banner: "./assets/ab67616d00001e02707ea5b8023ac77d31756ed4.jpeg" , singers: "Yo Yo Honey Singh"},
+    {songName:"Nachde Se Saare" , audio: "./assets/Audio/Nachde-Ne-Sare.mp3", banner: "./assets/ab67706c0000da84a3ff8736ea5b316a90408a50.jpeg" , singers: "anjali"},
+    {songName:"Ainvayi Ainvayi" , audio: "./assets/Audio/Ainvayi Ainvayi.mp3", banner: "./assets/ab67616d00001e02d49b0b7c02f3e61babef11b7.jpeg" , singers: "Salim-Sulaiman , Sunidhi Chauhan"},
+    {songName:"Kaun Tujhe" , audio: "./assets/Audio/Kaun Tujhe.mp3", banner: "./assets/ab6761610000517411d0343dc3387fc183dab2e0.jpeg" , singers: "Palak Muchhal"},
+    {songName:"Khalasi" , audio: "./assets/Audio/Khalasi.mp3", banner: "./assets/ab67616d00001e02ac515af787eb2080c7a0b129.jpeg" , singers: "Anchint , Adithya Gadhvi"},
+    {songName:"Mann Mohi Gayu" , audio: "./assets/Audio/Maru-Man-Mohi-Gayu.mp3", banner: "./assets/ab67616d00001e02bf35774f0ca5e1c3cfb4c222.jpeg" , singers: "Santvani Trivedi"},
+    {songName:"Ek Pal Ka Jeena" , audio: "./assets/Audio/Ek Pal Ka Jeena.mp3", banner: "./assets/ab67616d00001e023f3d35703bdcd917dad51c4f.jpeg" , singers: "Lucky Ali"},
 ]
 
 let MainSongDetails;
@@ -162,6 +162,7 @@ nextVideo.addEventListener("click" , ()=>{
     }
     songAudio.src = songs[songIndex].audio;
     mainSongTitle.innerText = songs[songIndex].songName;
+    mainSongSingers.innerText = songs[songIndex].singers;
     mainSongBannerDiv.innerHTML = ``
     mainSongBannerDiv.innerHTML = `<img class="mainSongBanner h-16 w-16" src="${songs[songIndex].banner}" alt="">`;
     songAudio.currentTime = 0;
@@ -181,6 +182,7 @@ previousVideo.addEventListener("click", ()=>{
     }
     songAudio.src = songs[songIndex].audio;
     mainSongTitle.innerText = songs[songIndex].songName;
+    mainSongSingers.innerText = songs[songIndex].singers
     mainSongBannerDiv.innerHTML = ``
     mainSongBannerDiv.innerHTML = `<img class="mainSongBanner h-16 w-16" src="${songs[songIndex].banner}" alt="">`;
     songAudio.currentTime = 0;
